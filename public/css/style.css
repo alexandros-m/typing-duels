@@ -1,0 +1,31 @@
+header {
+	padding:20px;
+	background-color: rgb(202, 202, 202);
+}
+
+footer {
+	padding: 20px;
+	border-top: 1px solid black;
+	font-size: 10px;
+}
+
+article {
+	padding: 20px;
+}
+
+.title {
+	font-size: 25px;
+	width: 100%;
+}
+
+#timer {
+	float: right;
+}
+
+#desiredString {
+	color: rgb(4, 102, 134);
+}
+
+#typedString {
+	color: rgb(108, 170, 15);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="shortcut icon" type="image/icon" href=favicon.ico />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>Typing duels!</title>
+</head>
+
+
+<body>
+    <header>
+        <p id='timer'>Time elapsed: 0</p>
+        <p class='title'>Typing duels!</p>
+    </header>
+    <article>
+        <div id='user_status'>Waiting for another user to connect.</div>
+        <p id='cps'></p>
+        <div id='main_text'>
+            <p class='unselectable' id='desiredString'></p>
+            <p id='potentialBreak'></p>
+            <p id='typedString'></p>
+        </div>
+        <textarea rows="10" cols="70" id='textarea'></textarea>
+    </article>
+    <footer>
+        Copyright &copy; Alexandros Bartzos 2018<br>
+        All the typing challenges are randomly generated.
+    </footer>
+    <script src="js/socket.io-1.2.0.js"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src='js/main.js'></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

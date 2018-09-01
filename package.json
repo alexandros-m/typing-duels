@@ -1,0 +1,26 @@
+{
+  "name": "typing-duels",
+  "version": "1.0.0",
+  "description": "Type racing application",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socketio": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "typing",
+    "race",
+    "game",
+    "webapp"
+  ],
+  "author": "alex-bartzos",
+  "license": "MIT",
+  "engines": {
+    "node": "10.9.0"
+  }
+}

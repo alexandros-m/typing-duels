@@ -22,8 +22,6 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-var user_count = 0;
-
 function createSentence() {
     //creates a sentence
     var sentenceLength = 10

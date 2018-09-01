@@ -42,7 +42,7 @@ function start_game() {
 }
 
 io.on('connection', function(socket) {
-    user_count++;
+    user_count = io.engine.clientsCount
     socket.on('user_finished', function(trash) {
         if (user_finished == 0){
             socket.emit("win_or_lose", "win!");
@@ -52,13 +52,12 @@ io.on('connection', function(socket) {
             user_finished = 0
         }
     });
-    if (user_count == 2) {
+    if (user_count !=  0 && user_count % 2 == 0) {
         //if there are 2 users connected,
         //the game starts and the counter
         //gets initialized again, so other users
         //can play too.
         start_game();
-        user_count = 0;
     }
 });
 

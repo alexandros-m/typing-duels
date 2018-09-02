@@ -21,9 +21,7 @@ function main(desiredString) {
 	function checkIfCorrect() {
 		if (counter % 20 == 0) {
 			timer++;
-			if (timer > -1) {
-				time.innerHTML = 'Time elapsed: ' + String(timer);
-			}
+			time.innerHTML = String(timer);
 		}
 		counter++;
 		textInput = document.getElementById('textarea').value;

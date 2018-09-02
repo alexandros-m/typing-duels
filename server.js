@@ -1,6 +1,4 @@
 //TODO: when the tab closes, the game should reset.
-//TODO: the footer should be locked on the bottom of the page.
-//TODO: add icons (for example instead of 'time elapsed', i should have an icon)
 
 var express = require('express');
 var app = express();

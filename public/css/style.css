@@ -24,7 +24,15 @@ article {
 }
 
 #timer-icon {
-	float: right;
+	width: 25px;
+	height: 25px;
+	float: left;
+}
+
+#cps-icon {
+	width: 25px;
+	height: 25px;
+	float: left;
 }
 
 #desiredString {
@@ -33,4 +41,8 @@ article {
 
 #typedString {
 	color: rgb(108, 170, 15);
+}
+
+#main_text {
+	clear: both;
 }

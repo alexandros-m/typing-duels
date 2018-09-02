@@ -2,6 +2,10 @@ var socket = io();
 var mainRunning = false;
 var refreshIntervalId = null;
 
+//hide the icons if the game is not started.
+document.getElementById('timer-icon').style.display = 'none';
+document.getElementById('cps-icon').style.display = 'none';
+
 //tells the server that a player has connected
 socket.emit('user_connected', 1);
 
@@ -21,24 +25,21 @@ function main(desiredString) {
 	function checkIfCorrect() {
 		if (counter % 20 == 0) {
 			timer++;
-			time.innerHTML = String(timer);
+			time.innerHTML = '&nbsp;&nbsp;' + String(timer);
 		}
 		counter++;
 		textInput = document.getElementById('textarea').value;
 		typedLetters = textInput.length;
 		if (textInput == desiredString.slice(0, typedLetters)) {
 			cps = Math.floor(typedLetters / timer);
-			document.getElementById('cps').innerHTML = "Characters per second: " + String(cps);
+			document.getElementById('cps').innerHTML = '&nbsp;&nbsp;' + String(cps);
 			document.getElementById('typedString').innerHTML = textInput;
 		}
 		if (desiredString == textInput) {
 			clearInterval(refreshIntervalId);
 			socket.emit('user_finished', 1);
 			socket.on('win_or_lose', function(win_or_lose) {
-				time.innerHTML = "You " + win_or_lose;
-				time.innerHTML += '<br>CPS: ' + String(cps);
-				document.getElementById('cps').innerHTML = "";
-
+				document.getElementById('win_or_lose').innerHTML = "You " + win_or_lose;
 			});
 		}
 
@@ -51,5 +52,7 @@ function main(desiredString) {
 socket.on('sentence', function (sentence) {
 	focusOnTextBox();
 	document.getElementById('user_status').innerHTML = '';
+	document.getElementById('timer-icon').style.display = 'block';
+	document.getElementById('cps-icon').style.display = 'block';
 	main(sentence);
 });

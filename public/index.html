@@ -11,13 +11,21 @@
 
 <body>
     <header>
-        <img id='timer-icon' src='pics/clock.png' alt='Time elapsed: '>
-        <p id='timer'></p>
         <p class='title'>Typing duels!</p>
     </header>
     <article>
+        <div id='timer-div'>
+            <img id='timer-icon' src='pics/clock.png' alt='Time elapsed: '
+            title='Time elapsed'>	
+            <p id='timer'></p>
+        </div>
         <div id='user_status'>Waiting for another user to connect.</div>
-        <p id='cps'></p>
+        <div id='cps-div'>
+            <img id='cps-icon' src='pics/cps.png' alt='Characters per second'
+            title='Characters per second'>
+            <p id='cps'></p>
+        </div>
+        <div id='win_or_lose'></div>
         <div id='main_text'>
             <p class='unselectable' id='desiredString'></p>
             <p id='potentialBreak'></p>

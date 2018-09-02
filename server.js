@@ -20,6 +20,10 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('*', function(req, res) {
+    res.sendFile(__dirname + '/public/404.html');
+});
+
 function createSentence() {
     //creates a sentence
     var sentenceLength = 10
